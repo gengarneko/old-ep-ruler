@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'ep-ruler'
+import { EpubRuler } from 'ep-ruler'
 import 'ep-ruler/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <EpubRuler />
 }
 
 export default App

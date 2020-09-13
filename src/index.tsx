@@ -1,10 +1,10 @@
 import * as React from 'react'
-import styles from './styles.module.css'
+// import styles from './styles.module.css'
 
-interface Props {
-  text: string
+interface IEpubRuler {
+  scale?: number
 }
-
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const EpubRuler: React.FC<IEpubRuler> = (props) => {
+  const { scale } = props
+  return <div>{scale}epub ruler</div>
 }
