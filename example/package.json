@@ -21,6 +21,8 @@
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
     "typescript": "link:../node_modules/typescript",
+    "@types/styled-components": "link:../node_modules/@types/styled-components",
+    "styled-components": "link:../node_modules/styled-components",
     "ep-ruler": "link:.."
   },
   "devDependencies": {
