@@ -62,11 +62,9 @@ export interface IEpubRuler {
       valueBgColor: string
     }
   }
-
-  lines?: { h: number[]; v: number[] }
   actionRef?: React.MutableRefObject<RulerActionType | undefined | null> | ((actionRef: RulerActionType) => void)
-  updateRuler?: (lines: { h: number[]; v: number[] }) => void
   rulerRefreshTrigger?: number
+  updateRuler?: (lines: { h: number[]; v: number[] }) => void
 }
 export interface IEpubRulerProps {
   ratio?: number
@@ -118,7 +116,6 @@ export interface IEpubRulerProps {
     }
   }
 
-  lines?: { h: number[]; v: number[] }
   actionRef?: React.MutableRefObject<RulerActionType | undefined | null> | ((actionRef: RulerActionType) => void)
   updateRuler?: (lines: { h: number[]; v: number[] }) => void
 }
@@ -172,7 +169,6 @@ const initialState: IEpubRuler = {
       valueBgColor: 'rgb(235, 86, 72, 0.6)'
     }
   },
-  lines: { h: [], v: [] },
   updateRuler: () => console.log(123),
   rulerRefreshTrigger: 0
 }

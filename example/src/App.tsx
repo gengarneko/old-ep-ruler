@@ -15,7 +15,6 @@ const App = () => {
     isShowReferLine: true
   })
 
-  const [breadth] = useState(20)
   const [scale, setScale] = useState(1)
   const [lines, setLines] = useState<{ h: number[]; v: number[] }>({
     h: [],
@@ -110,8 +109,7 @@ const App = () => {
         listenDOM={auto}
         // rulerValue={manual}
         scale={scale}
-        lines={lines}
-        breadth={breadth}
+        guides={lines}
         actionRef={childRef}
         // style={style}
         updateRuler={updateLines}
@@ -151,9 +149,9 @@ const App = () => {
             }}
             onChange={(e) => handleChangeScale(e.target.value)}
           >
+            <option value="1">1</option>
             <option value="0.25">0.25</option>
             <option value="0.5">0.5</option>
-            <option value="1">1</option>
             <option value="1.25">1.25</option>
             <option value="1.5">1.5</option>
             <option value="2">2</option>
