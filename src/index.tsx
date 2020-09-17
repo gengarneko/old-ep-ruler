@@ -236,7 +236,6 @@ const reducer = (draft: any, action: { type: actionType; payload: any }) => {
       return
     case 'updateGuide':
       vertical ? (draft.guides.v[index] = value) : (draft.guides.h[index] = value)
-      return
   }
 }
 
@@ -304,10 +303,11 @@ export const EpubRuler = (props: IEpubRulerProps) => {
       <RulerActions.Provider value={{ dispatch }}>
         <WrapperEpubRuler>
           <RulerLayer vertical={false} />
-          <RulerLayer vertical={true} />
+          <RulerLayer vertical />
           <CornerContainer breadth={20} />
         </WrapperEpubRuler>
       </RulerActions.Provider>
     </RulerContext.Provider>
   )
 }
+  
